@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "ee43327e-dd87-427f-af33-806add3c79f2",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20518016"
+	},
+	"item": [
+		{
+			"name": "Add customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA1NTEwODcxLCJqdGkiOiIxNzZlMjhmOWVjZTI0OTQ4YTEzOTg4YTc1MTJmMTlmMCIsInVzZXJfaWQiOjJ9.-l3zJL8ZGYhlI5bhT2pYMGe8bGzVMlitxxk5vZMhLao"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "AKsadasdsd",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "CH",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "11/11/1997",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "123432123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/customer/createCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "list customer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA1NTA1MTExLCJpYXQiOjE3MDU1MDIxMTEsImp0aSI6IjAwYzk1MmVlZDRhZDRmOWE4MDdmMDkyZGYwNTQ3ZTg3IiwidXNlcl9pZCI6Mn0.lMZzIEItq3LoaaCXPzspsl1PwYszJlvhiSSjZ6jBfGg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "localhost:8000/customer/listCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "update customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA1NDI3Njc1LCJpYXQiOjE3MDU0MjQ2NzUsImp0aSI6ImM0YTE1NDc5NzQyOTRjNDFiMmY4Mzc2NDRlOTVmMDkxIiwidXNlcl9pZCI6Mn0.bhoM-puQIaZcQ3Oj1nbE6fYFFSfB0f57WFzA_HTpQHc"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "axsdxsdsadasd",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "aaaaa",
+							"type": "text"
+						},
+						{
+							"key": "date_of_birth",
+							"value": "1997-11-11",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "123432123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/customer/updateCustomer/5"
+			},
+			"response": []
+		},
+		{
+			"name": "delete customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA1NDI3Njc1LCJpYXQiOjE3MDU0MjQ2NzUsImp0aSI6ImM0YTE1NDc5NzQyOTRjNDFiMmY4Mzc2NDRlOTVmMDkxIiwidXNlcl9pZCI6Mn0.bhoM-puQIaZcQ3Oj1nbE6fYFFSfB0f57WFzA_HTpQHc"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "localhost:8000/customer/deleteCustomer/5"
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "aaaaa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/user/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "aaaaa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/user/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "get new access token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwNTUwMTMzOSwianRpIjoiY2RhYTEzNWY1YTVkNDgxNWFkYjI5Y2FlZjg3OGI1NjgiLCJ1c2VyX2lkIjoxfQ.De-bInR44KUAlT_9zospGCJ3u-xFfKEfa7gVUfjecyU",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/user/api/login/refresh"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh_token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwNTU2ODkwMCwianRpIjoiNGQ5YTBjOTNlZjBiNDg2MjllMzJhMWUzMDlhZTg3NGIiLCJ1c2VyX2lkIjoyfQ.ehnJTGOLOODq_BHm6AeX7DXETBfXyZOp_mqdtaSmwcg",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8000/user/api/logout"
+			},
+			"response": []
+		}
+	]
+}
