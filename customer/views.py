@@ -27,16 +27,7 @@ class ListCustomer(generics.ListAPIView):
     def get_queryset(self):
         currentUser = self.request.user
         return Customer.objects.filter(user=currentUser)
-    
 
-# from rest_framework.views import APIView
-# class ListCustomer(APIView):
-#     def get(self, request, format=None):
-#         currentUser = self.request.user
-#         data  = Customer.objects.filter(user=currentUser)
-#         serializer = CustomerSerializer(data, many=True)
-#         return Response(serializer.data, status=status.HTTP_200_OK)
-    
 
 @api_view(['PUT'])
 @authentication_classes([JWTAuthentication])
